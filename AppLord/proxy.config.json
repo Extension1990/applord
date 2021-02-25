@@ -1,0 +1,10 @@
+{
+    "apiUrl": {
+        "target": "https://localhost:4200",
+        "secure": true,
+        "pathRewrite": {
+            "https://swapi.dev/": ""
+        },
+        "changeOrigin": true
+    }
+}
