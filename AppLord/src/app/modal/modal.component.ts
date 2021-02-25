@@ -11,7 +11,7 @@ export class ModalComponent implements OnInit {
 
   @Input() filmId: number;
 
-  // filmId: number;
+  // filmId = null;
   film: any;
 
   constructor(private service: MainServiceService, private modalCltr: ModalController, private navParams: NavParams) { }

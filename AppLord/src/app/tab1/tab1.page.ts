@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, Input, OnInit } from '@angular/core';
+import { ModalController, NavParams } from '@ionic/angular';
 import { ModalComponent } from '../modal/modal.component';
 import { MainServiceService } from '../services/main-service.service';
 
@@ -10,6 +10,11 @@ import { MainServiceService } from '../services/main-service.service';
 })
 export class Tab1Page implements OnInit {
 
+  @Input() title: string;
+  @Input() director: string;
+  @Input() producer: string;
+
+  film: any;
   films: any;
   filmId: number;
   value: number;
@@ -28,8 +33,8 @@ export class Tab1Page implements OnInit {
   }
   getFilmsById(filmId) {
     this.service.getFilmsById(filmId).subscribe((film) => {
-      this.films = film.results;
-      console.log(this.films);
+      this.film = film.results;
+      console.log(this.film);
     });
   }
 
@@ -37,11 +42,14 @@ export class Tab1Page implements OnInit {
     const modal = await this.modalCltr.create({
       component: ModalComponent,
       componentProps: {
-        filmId: this.value
+        filmId: this.value,
+        title: this.title,
+        director: this.director,
+        producer: this.producer
       }
     });
 
-    modal.present();
+    return await modal.present();
   }
 
 }
