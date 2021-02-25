@@ -18,7 +18,7 @@
     </ion-list>
   </div> -->
 
-  <ion-card *ngFor="let film of films">
+  <ion-card *ngFor="let film of films" (click)="openModal()">
     <!-- <ion-card-header>
 
     </ion-card-header> -->
@@ -27,7 +27,7 @@
       <div class="content">
       </div>
         <ion-card-title>{{film.title}}</ion-card-title>
-        <ion-card-subtitle>In The City Shows!!!</ion-card-subtitle>
+        <ion-card-subtitle>Director: {{film.director}}</ion-card-subtitle>
         <ion-progress-bar value="0.7" color="primary"></ion-progress-bar>
     </ion-card-content>
   </ion-card>
