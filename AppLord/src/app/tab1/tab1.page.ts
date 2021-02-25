@@ -12,6 +12,7 @@ export class Tab1Page implements OnInit {
 
   films: any;
   filmId: number;
+  value: number;
 
   constructor(private service: MainServiceService, private modalCltr: ModalController) {}
 
@@ -26,18 +27,21 @@ export class Tab1Page implements OnInit {
     });
   }
   getFilmsById(filmId) {
-    this.service.getFilmsById(filmId).subscribe((films) => {
-      this.films = films.results;
+    this.service.getFilmsById(filmId).subscribe((film) => {
+      this.films = film.results;
       console.log(this.films);
     });
   }
 
   async openModal() {
     const modal = await this.modalCltr.create({
-      component: ModalComponent
+      component: ModalComponent,
+      componentProps: {
+        filmId: this.value
+      }
     });
 
-    await modal.present();
+    modal.present();
   }
 
 }

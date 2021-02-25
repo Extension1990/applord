@@ -22,12 +22,12 @@ export class MainServiceService {
     return this.http.get<any>(this.apiUrl + 'films/');
   }
   getFilmsById(id: number) {
-    return this.http.get<any>(this.apiUrl + 'films/' + id);
+    return this.http.get<any>(this.apiUrl + 'films/' + id + '/');
   }
   getCharacters() {
     return this.http.get<any>(this.apiUrl + 'people/');
   }
-  getStarship() {
+  getStarships() {
     return this.http.get<any>(this.apiUrl + 'starships/');
   }
 }
