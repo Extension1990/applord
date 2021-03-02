@@ -3,10 +3,19 @@ ion-tool-bar {
     --ion-color: #fdfdfd;
 }
 
-ion-card-subtitle {
-    --color: whitesmoke;
+ion-card {
+    --ion-background-color: #a0a0a0;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 0px;
+    border-left: 3px solid #61191A;
 }
 
-ion-card {
-    --background-color: #fdfdfd;
+ion-card-title {
+    --color: #242d3d;
+    padding-bottom: 1px;
+}
+
+ion-card-subtitle {
+    --color: #e2e2e2;
+    padding-bottom: 1px;
 }

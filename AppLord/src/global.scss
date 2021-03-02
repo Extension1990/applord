@@ -37,18 +37,6 @@ ion-tool-bar {
     --ion-color: #fdfdfd;
 }
 
-ion-card {
-    --ion-background-color: #a0a0a0;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-    border-radius: 0px;
-    border-left: 3px solid #61191A;
-}
-
-ion-card-subtitle {
-    --color: #61191A;
-    padding-bottom: 1px;
-}
-
 ion-title, ion-button {
     --color: rgb(223, 223, 223);
 }

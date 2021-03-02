@@ -3,6 +3,19 @@ ion-tool-bar {
     --ion-color: #fdfdfd;
 }
 
+ion-card {
+    --ion-background-color: whitesmoke;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    border-radius: 0px;
+    border-top: 3px solid #2F5BA4;
+}
+
+ion-card-title {
+    --color: #2F5BA4;
+    padding-bottom: 1px;
+}
+
 ion-card-subtitle {
-    --color: whitesmoke;
+    --color: #61191A;
+    padding-bottom: 1px;
 }
