@@ -41,7 +41,8 @@ export class Tab3Page implements OnInit {
         speed: starship.max_atmosphering_speed,
         model: starship.model,
         name: starship.name,
-        passengers: starship.passengers
+        passengers: starship.passengers,
+        starshipClass: starship.starship_class
       }
     });
 

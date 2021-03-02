@@ -21,6 +21,7 @@ export class Tab3ModalComponent {
   @Input() speed: string;
   @Input() model: string;
   @Input() passengers: string;
+  @Input() starshipClass: string;
 
   constructor(private modalCltr: ModalController) { }
 
