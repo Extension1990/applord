@@ -10,7 +10,7 @@
   <h4>All Starships</h4>
   <div class="list">
     <ion-list>
-        <ion-item button *ngFor="let star of starships" (click)="openModal()">
+        <ion-item button *ngFor="let star of starships" (click)="openModal(star)">
           <ion-label>{{star.name}}</ion-label>
           <ion-icon name="star"></ion-icon>
         </ion-item>

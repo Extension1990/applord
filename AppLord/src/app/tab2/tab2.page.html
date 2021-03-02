@@ -10,7 +10,7 @@
   <h4>All Characters</h4>
   <div class="list">
     <ion-list>
-        <ion-item button *ngFor="let char of chars" (click)="openModal()">
+        <ion-item button *ngFor="let char of chars" (click)="openModal(char)">
           <img class="img-item" src="../../assets/img/profile.jpg" alt="">&nbsp;&nbsp;&nbsp;
           <ion-label>{{char.name}}</ion-label>
           <ion-icon name="contact"></ion-icon>
