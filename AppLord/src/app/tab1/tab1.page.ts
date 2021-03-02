@@ -34,7 +34,9 @@ export class Tab1Page implements OnInit {
       componentProps: {
         title: film.title,
         director: film.director,
-        producer: film.producer
+        producer: film.producer,
+        openingCrawl: film.opening_crawl,
+        chars: film.characters.length
       }
     });
     console.log(title);

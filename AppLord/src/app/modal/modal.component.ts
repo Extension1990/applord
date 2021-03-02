@@ -11,6 +11,8 @@ export class ModalComponent {
   @Input() title: string;
   @Input() director: string;
   @Input() producer: string;
+  @Input() openingVrawl: string;
+  @Input() chars: number;
 
   constructor(private modalCltr: ModalController) { }
 
