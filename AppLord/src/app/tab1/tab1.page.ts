@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ModalController, NavParams } from '@ionic/angular';
+import { DirectiveNormalizer } from '@angular/compiler';
+import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { title } from 'process';
 import { ModalComponent } from '../modal/modal.component';
 import { MainServiceService } from '../services/main-service.service';
 
@@ -10,14 +12,8 @@ import { MainServiceService } from '../services/main-service.service';
 })
 export class Tab1Page implements OnInit {
 
-  @Input() title: string;
-  @Input() director: string;
-  @Input() producer: string;
-
   film: any;
   films: any;
-  filmId: number;
-  value: number;
 
   constructor(private service: MainServiceService, private modalCltr: ModalController) {}
 
@@ -31,24 +27,17 @@ export class Tab1Page implements OnInit {
       console.log(this.films);
     });
   }
-  getFilmsById(filmId) {
-    this.service.getFilmsById(filmId).subscribe((film) => {
-      this.film = film.results;
-      console.log(this.film);
-    });
-  }
 
-  async openModal() {
+  async openModal(film) {
     const modal = await this.modalCltr.create({
       component: ModalComponent,
       componentProps: {
-        filmId: this.value,
-        title: this.title,
-        director: this.director,
-        producer: this.producer
+        title: film.title,
+        director: film.director,
+        producer: film.producer
       }
     });
-
+    console.log(title);
     return await modal.present();
   }
 

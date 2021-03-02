@@ -1,28 +1,18 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ModalController, NavParams } from '@ionic/angular';
-import { MainServiceService } from '../services/main-service.service';
+import { Component, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent {
 
-  @Input() filmId: number;
+  @Input() title: string;
+  @Input() director: string;
+  @Input() producer: string;
 
-  // filmId = null;
-  film: any;
-
-  constructor(private service: MainServiceService, private modalCltr: ModalController, private navParams: NavParams) { }
-
-  ngOnInit() {
-    this.filmId = this.navParams.get('filmId');
-    console.log(this.filmId);
-    this.service.getFilmsById(this.filmId).subscribe((film) => {
-      console.log(film);
-    });
-  }
+  constructor(private modalCltr: ModalController) { }
 
   dismissModal() {
     this.modalCltr.dismiss();

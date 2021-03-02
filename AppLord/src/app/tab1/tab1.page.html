@@ -9,12 +9,12 @@
 <ion-content [fullscreen]="true">
   <h4>All Films</h4>
 
-  <ion-card *ngFor="let film of films" (click)="openModal()">
+  <ion-card *ngFor="let film of films">
     <!-- <ion-card-header>
 
     </ion-card-header> -->
 
-    <ion-card-content class="ion-text-left">
+    <ion-card-content class="ion-text-left" (click)="openModal(film)">
       <div class="content">
       </div>
         <ion-card-title>{{film.title}}</ion-card-title>
