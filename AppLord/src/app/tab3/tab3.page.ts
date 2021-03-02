@@ -22,7 +22,6 @@ export class Tab3Page implements OnInit {
   getStarships() {
     this.service.getStarships().subscribe((starships) => {
       this.starships = starships.results;
-      console.log(this.starships);
     });
   }
 

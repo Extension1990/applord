@@ -24,7 +24,6 @@ export class Tab1Page implements OnInit {
   getFilms() {
     this.service.getFilms().subscribe((films) => {
       this.films = films.results;
-      console.log(this.films);
     });
   }
 
@@ -39,7 +38,7 @@ export class Tab1Page implements OnInit {
         chars: film.characters.length
       }
     });
-    console.log(title);
+
     return await modal.present();
   }
 

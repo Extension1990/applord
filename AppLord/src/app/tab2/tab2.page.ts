@@ -22,7 +22,6 @@ export class Tab2Page implements OnInit {
   getCharacters() {
     this.service.getCharacters().subscribe((chars) => {
       this.chars = chars.results;
-      console.log(this.chars);
     });
   }
 
