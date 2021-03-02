@@ -37,7 +37,11 @@ ion-tool-bar {
     --ion-color: #fdfdfd;
 }
 
-ion-title, ion-button {
+ion-button {
+    color: whitesmoke;
+}
+
+ion-title {
     --color: rgb(223, 223, 223);
 }
 
